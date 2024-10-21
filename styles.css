@@ -1,0 +1,406 @@
+/* Styling untuk header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* Sesuaikan dengan warna latar */
+  z-index: 1000; /* Supaya tetap di atas elemen lain */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan agar terlihat lebih jelas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Memberikan jarak di bawah header agar konten tidak tertutupi */
+body {
+  margin-top: 140px; /* Sesuaikan dengan tinggi header, jika header lebih tinggi sesuaikan angka ini */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #333;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #ccc;
+}
+
+/* Search box style */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-container input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #d0021b;
+  color: white;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Slider styling */
+.slider {
+  width: 55%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.slide-tag {
+  background-color: #d0021b;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.slide-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dot navigation styling */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #d0021b;
+}
+
+/* News section styling */
+.news-section {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.news-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d0021b;
+  margin-bottom: 10px;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.news-content {
+  max-width: 300px;
+}
+
+.news-content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #d0021b;
+}
+
+.news-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.news-content time {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Tambahkan ini di dalam file CSS Anda */
+
+.news-container {
+  margin: 30px 0;
+}
+
+.news-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.red-line {
+  width: 100px;
+  height: 5px;
+  background-color: #d0021b;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.news-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.news-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.news-card p {
+  font-size: 12px;
+  color: #999;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Mengubah layout menjadi 3 kolom */
+  gap: 20px;
+}
+
+.news-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.news-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.news-card p {
+  font-size: 12px;
+  color: #999;
+}
+/*for index*/
+.index-body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.index-header {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 40px 20px; /* Increased padding for larger header */
+  overflow: hidden; /* Ensure the fog stays within the header bounds */
+  display: flex; /* This will align the items in a row */
+  align-items: center; /* Vertically center align the logo and text */
+  justify-content: space-between; /* Space between the logo and the h1 */
+}
+
+.vanta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the fog is behind the content */
+}
+
+.index-header h1 {
+  margin-left: 10px; /* Adjust this value to move h1 closer to the left */
+  font-size: 50px; /* Enlarge the header text */
+  z-index: 2; /* Ensure h1 appears above the Vanta background */
+  position: relative;
+  color: white; /* Ensure the text is white */
+}
+
+.index-header img {
+  margin-right: auto; /* Moves the image less to the right */
+  height: 100px;
+  vertical-align: middle;
+  z-index: 2;
+  position: relative;
+}
+
+.search-container-index {
+  position: absolute;
+  bottom: 10px; /* Adjust position of search bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width of the search bar */
+  z-index: 1; /* Ensure search bar stays above the fog */
+}
+.search-container-index input[type="text"] {
+  width: 100%;
+  padding: 15px; /* Increase padding for a larger search bar */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.icon-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px; /* Increased margin for spacing after header */
+}
+.icon-menu div {
+  background-color: #00C7B1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 140px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.icon-menu img {
+  height: 60px; /* Enlarge the icons */
+  margin-bottom: 10px;
+}
+.icon-menu div p {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+}
+.icon-menu a {
+  text-decoration: none;
+  color: inherit; /* Ensure the link inherits the text color */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.article-header img {
+  margin-right: auto; /* Moves the image less to the right */
+  height: 50px;
+  vertical-align: middle;
+  z-index: 2;
+  position: relative;
+}

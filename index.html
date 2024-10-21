@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Management System KNPKI</title>
+    <style>
+        .index-body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .index-header {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 100px 20px; /* Increased padding for larger header */
+            overflow: hidden; /* Ensure the fog stays within the header bounds */
+        }
+
+        .vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the fog is behind the content */
+        }
+        .index-header img {
+            height: 90px; /* Enlarge the logo */
+            vertical-align: middle;
+            z-index: 1; /* Ensure the logo stays above the fog */
+        }
+        .index-header h1 {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 45px; /* Enlarge the header text */
+            z-index: 1; /* Ensure the title stays above the fog */
+        }
+        .index-search-container {
+            position: absolute;
+            bottom: 20px; /* Adjust position of search bar */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65%; /* Adjust width of the search bar */
+            z-index: 1; /* Ensure search bar stays above the fog */
+        }
+        
+        .index-search-container input[type="text"] {
+            width: 100%;
+            padding: 15px; /* Increase padding for a larger search bar */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            
+        }
+
+        .icon-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px; /* Increased margin for spacing after header */
+        }
+        .icon-menu div {
+            background-color: #00C7B1;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 140px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .icon-menu img {
+            height: 60px; /* Enlarge the icons */
+            margin-bottom: 10px;
+        }
+        .icon-menu div p {
+            margin: 0;
+            color: #333;
+            font-weight: bold;
+        }
+        .icon-menu a {
+            text-decoration: none;
+            color: inherit; /* Ensure the link inherits the text color */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="index-body">
+
+    <!-- Header with Vanta Fog effect -->
+    <header class="index-header">
+        <!-- Vanta Background will be applied here -->
+        <div class="vanta-bg td-mesh-bg"></div>
+
+        <!-- Header content -->
+        <img src="\assets\New-Logo-KNPK-Idn-basic-gold-1-300x300.png" alt="KNPKI Logo">
+        <h1>Knowledge Management System KNPKI</h1>
+        <div class="index-search-container">
+            <input type="text" placeholder="Search, what are you looking for?">
+        </div>
+    </header>
+
+    <!-- Icon Menu -->
+    <div class="icon-menu">
+        <a href="article.html">
+            <div>
+                <img src="articles.png" alt="Latest Additions">
+                <p>Articles and Others Scientific Report</p>
+            </div>
+        </a>
+        <div>
+            <img src="quotes.png" alt="Advanced Search">
+            <p>Quotes and Keynote Speech</p>
+        </div>
+        <div>
+            <img src="Search.png" alt="Browse Repository">
+            <p>Advanced Search</p>
+        </div>
+        <div>
+            <img src="profile.png" alt="About Us">
+            <p>About Us</p>
+        </div>
+        <div>
+            <img src="policy.png" alt="Policies">
+            <p>Policies</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Knowledge Management System KNPKI. All rights reserved.</p>
+    </footer>
+
+    <!-- Vanta.js and Three.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    
+    <!-- Initialize Vanta Fog Effect -->
+    <script>
+        VANTA.FOG({
+            el: ".td-mesh-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xffe599,
+            midtoneColor: 0xcc0000,
+            lowlightColor: 0x990000,
+            baseColor: 0x660000,
+            blurFactor: 0.90,
+            speed: 0.10,
+            zoom: 0.30
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Koalisi Nasional Perlindungan Keluarga Indonesia</title>
+    <link rel="stylesheet" href="styleart.css">
+</head>
+<body>
+    <header>
+         <!-- Vanta Background will be applied here -->
+         <div class="vanta-bg td-mesh-bg"></div>
+
+         <!-- Header content -->
+         <img src="\assets\New-Logo-KNPK-Idn-basic-gold-1-300x300.png" alt="KNPKI Logo">
+
+        <h1>Koalisi Nasional Perlindungan Keluarga Indonesia</h1>
+        <nav>
+            <ul id="menu-menu-utama" class="td-mobile-main-menu">
+                <!-- Updated Beranda link to redirect to index.html -->
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="/artikel">Artikel</a></li>
+                <li><a href="/quotes">Quotes</a></li>
+                <li><a href="/hubungi-kami">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Cari artikel atau quotes...">
+            <button onclick="searchContent()">Cari</button>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Slider Section -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <a href="article-id.html">
+                    <img src="image1.png" alt="Image 1">
+                    <div class="slide-content">
+                        <div class="slide-tag">Kesehatan</div>
+                        <div class="slide-title">Peningkatan layanan kesehatan di daerah terpencil</div>
+                    </div>
+                </a>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <a href="article-id.html">
+                    <img src="famili.jpg" alt="Image 2">
+                    <div class="slide-content">
+                        <div class="slide-tag">Ekonomi</div>
+                        <div class="slide-title">Pemulihan ekonomi pasca-pandemi</div>
+                    </div>
+                </a>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <a href="article-id.html">
+                    <img src="pendidikan.jpg" alt="Image 3">
+                    <div class="slide-content">
+                        <div class="slide-tag">Pendidikan</div>
+                        <div class="slide-title">Peran pendidikan dalam membangun masa depan</div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+
+            <!-- Dots Navigation -->
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="news-section">
+            <h2>UNGGAHAN TERBARU</h2>
+            <div class="news-item">
+                <img src="image1.png" alt="News Image 1">
+                <div class="news-content">
+                    <h3>PON Aceh Sumut 2024</h3>
+                    <p>Korfball pertandingkan tiga nomor pada debut perdana PON XXI</p>
+                    <time>4 menit lalu</time>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="image1.png" alt="News Image 2">
+                <div class="news-content">
+                    <h3>PON Aceh Sumut 2024</h3>
+                    <p>Papua Barat kawinkan emas dayung stand up paddle PON</p>
+                    <time>7 menit lalu</time>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="image1.png" alt="News Image 3">
+                <div class="news-content">
+                    <h3>PON Aceh Sumut 2024</h3>
+                    <p>Hoki outdoor putra Kalimantan Timur menang tipis 1-0 atas Papua</p>
+                    <time>14 menit lalu</time>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="image1.png" alt="News Image 4">
+                <div class="news-content">
+                    <h3>PON Aceh Sumut 2024</h3>
+                    <p>Muaythai Jawa Timur tetap ikuti upacara Pembukaan PON Aceh-Sumut</p>
+                    <time>19 menit lalu</time>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+        <h2>Terkini</h2>
+        <hr class="red-line">
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="image1.png" alt="News Image 1">
+                <h3>KPU cek 107 bakal calon kepala daerah yang belum lengkapi LHKPN</h3>
+                <p>1 jam lalu</p>
+            </div>
+            <div class="news-card">
+                <img src="image2.png" alt="News Image 2">
+                <h3>Wapres bertolak ke Kepri dan Babel resmikan inpres jalan daerah</h3>
+                <p>1 jam lalu</p>
+            </div>
+            <div class="news-card">
+                <img src="image3.png" alt="News Image 3">
+                <h3>Kegiatan upacara pembukaan PON Aceh-Sumut 2024</h3>
+                <p>2 jam lalu</p>
+            </div>
+            <div class="news-card">
+                <img src="image4.png" alt="News Image 4">
+                <h3>Berita terbaru tentang PON Aceh-Sumut</h3>
+                <p>3 jam lalu</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>© 2024 Koalisi Nasional Perlindungan Keluarga Indonesia. All rights reserved.</p>
+    </footer>
+
+    <!-- fanta -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.fog.min.js"></script>
+
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
